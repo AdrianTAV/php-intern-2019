@@ -14,3 +14,28 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Employees crud routes
+Route::get('/about', 'AboutController@index');
+Route::get('/employees', 'EmployeesController@show');
+
+Route::get('/employees/add', 'EmployeesController@add');
+Route::post('/employees/add', 'EmployeesController@create');
+
+Route::get('/employees/edit/{id}', 'EmployeesController@edit');
+Route::put('/employees/{id}', 'EmployeesController@update');
+
+Route::delete('/employees/{id}', 'EmployeesController@delete');
+
+//Comapnies crud routes
+Route::get('/companies', 'CompaniesController@show');
+
+Route::get('/companies/add', 'CompaniesController@add');
+Route::post('/companies/add', 'CompaniesController@create');
+
+Route::get('/companies/edit/{id}', 'CompaniesController@edit');
+Route::put('/companies/{id}', 'CompaniesController@update');
+
+Route::delete('/companies/{id}', 'CompaniesController@delete');
+
+

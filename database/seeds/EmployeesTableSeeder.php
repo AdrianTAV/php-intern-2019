@@ -3,15 +3,16 @@
 use Illuminate\Database\Seeder;
 use App\Employee;
 
-class DatabaseSeeder extends Seeder
+
+class EmployeesTableSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-         $this->call(EmployeesTableSeeder::class);
+        factory(Employee::class, 5)->create();
     }
 }
